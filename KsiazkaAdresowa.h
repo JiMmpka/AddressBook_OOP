@@ -14,7 +14,7 @@ class KsiazkaAdresowa{
     UzytkownikMeneger uzytkownikMeneger;
 
 public:
-    KsiazkaAdresowa();
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami);//przekazywanie do konstruktora nazwy pliku z funkcji main w pliku cpp konstruktor moze zawiwrac pozostale inicjacje
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
 };

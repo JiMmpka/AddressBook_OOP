@@ -12,14 +12,14 @@
 using namespace std;
 
 class PlikZUzytkownikami{
-    fstream plikTekstowy;
-    string nazwaPlikuZUzytkownikami;
+    //fstream plikTekstowy;
+    const string nazwaPlikuZUzytkownikami;
 
-    bool czyPlikJestPusty();
+    bool czyPlikJestPusty(fstream &plikTekstowy);
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
 
 public:
-    PlikZUzytkownikami();
+    PlikZUzytkownikami(string NAZWAPLIKUZUZYTKOWNIKAMI) : nazwaPlikuZUzytkownikami(NAZWAPLIKUZUZYTKOWNIKAMI){}; // aby zdefiniowaæ sta³¹ globaln¹ const trzeba j¹ zainicjalizowaæ w liœcie inicjalizacyjnej konstruktora w pliku nag³ówkowym lub w pliku cpp
     void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
     vector <Uzytkownik> wczytajUzytkownikowZPliku();
     Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
