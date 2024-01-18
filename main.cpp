@@ -1,5 +1,6 @@
 #include <iostream>
 #include "KsiazkaAdresowa.h"
+#include "UzytkownikMeneger.h"
 
 using namespace std;
 
@@ -9,8 +10,13 @@ int main()
 
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
     ksiazkaAdresowa.rejestracjaUzytkownika();
+
+    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
     ksiazkaAdresowa.logowanieUzytkownika();
-    //ksiazkaAdresowa.rejestracjaUzytkownika();
+
+    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 
     return 0;
