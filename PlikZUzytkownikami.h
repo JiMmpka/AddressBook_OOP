@@ -20,8 +20,10 @@ class PlikZUzytkownikami{
 
 public:
     PlikZUzytkownikami(string NAZWAPLIKUZUZYTKOWNIKAMI) : nazwaPlikuZUzytkownikami(NAZWAPLIKUZUZYTKOWNIKAMI){}; // aby zdefiniowaæ sta³¹ globaln¹ const trzeba j¹ zainicjalizowaæ w liœcie inicjalizacyjnej konstruktora w pliku nag³ówkowym lub w pliku cpp
+
     void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
     vector <Uzytkownik> wczytajUzytkownikowZPliku();
     Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
+    void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> &uzytkownicy);
 };
 #endif // PLIKZUZYTKOWNIKAMI_H

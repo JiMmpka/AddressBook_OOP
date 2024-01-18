@@ -31,5 +31,6 @@ public:
     void logowanieUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
+    void zmianaHaslaZalogowanegoUzytkownika();
 };
 #endif // UZYTKOWNIKMENEGER_H

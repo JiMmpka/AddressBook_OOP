@@ -16,3 +16,6 @@ void KsiazkaAdresowa::logowanieUzytkownika(){
     uzytkownikMeneger.logowanieUzytkownika();
 }
 
+void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika(){
+    uzytkownikMeneger.zmianaHaslaZalogowanegoUzytkownika();
+}
