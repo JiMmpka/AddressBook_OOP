@@ -132,3 +132,8 @@ void UzytkownikMeneger::zmianaHaslaZalogowanegoUzytkownika()
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
 
+void UzytkownikMeneger::wylogowanieUzytkownika(){
+    idZalogowanegoUzytkownika = 0;
+    //adresaci.clear();
+}
+
