@@ -14,22 +14,21 @@ Uzytkownik UzytkownikMeneger::podajDaneNowegoUzytkownika()
 {
     Uzytkownik uzytkownik;
 
-    //uzytkownik.id = pobierzIdNowegoUzytkownika();
     uzytkownik.ustawId(pobierzIdNowegoUzytkownika());
-    string login;
+    string login = "";
+    string haslo = "";
 
     do
     {
         cout << "Podaj login: ";
-        cin >> login;
+        login = MetodyPomocnicze::wczytajLinie();
         //uzytkownik.login = wczytajLinie();
         uzytkownik.ustawLogin(login);
     }
     while (czyIstniejeLogin(uzytkownik.pobierzLogin()) == true);
 
-    string haslo;
     cout << "Podaj haslo: ";
-    cin >> haslo;
+    haslo = MetodyPomocnicze::wczytajLinie();
 
     uzytkownik.ustawHaslo(haslo);
 
@@ -80,5 +79,38 @@ void UzytkownikMeneger::wypiszWszystkichUzytkownikow(){
 
 void UzytkownikMeneger::wczytajUzytkownikowZPliku(){
     uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+}
+
+void UzytkownikMeneger::logowanieUzytkownika(){
+    Uzytkownik uzytkownik;
+    string login = "", haslo = "";
+    idZalogowanegoUzytkownika = 0; // przemyœleæ czy to jest potrzebne
+    vector <Uzytkownik>::iterator itr = uzytkownicy.begin();
+
+    cout << endl << "Podaj login: ";
+    login = MetodyPomocnicze::wczytajLinie();
+
+    while (itr != uzytkownicy.end()){
+        if (itr -> pobierzLogin() == login){
+            for (int iloscProb = 3; iloscProb > 0; iloscProb--){
+                cout << "Podaj haslo. Pozostalo prob: " << iloscProb << ": ";
+                haslo = MetodyPomocnicze::wczytajLinie();
+
+                if (itr -> pobierzHaslo() == haslo){
+                    idZalogowanegoUzytkownika = itr -> pobierzId();
+                    cout << endl << "Zalogowales sie." << endl << endl;
+                    system("pause");
+                    return;
+                }
+            }
+            cout << "Wprowadzono 3 razy bledne haslo." << endl;
+            system("pause");
+            return;
+        }
+        itr++;
+    }
+    cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
+    system("pause");
+    return;
 }
 
