@@ -1,6 +1,7 @@
 #include "KsiazkaAdresowa.h"
 
-KsiazkaAdresowa::KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) : uzytkownikMeneger(nazwaPlikuZUzytkownikami){//lista inicjalizacyjna przekazujaca nazewPlioku... do kolejnych klas
+KsiazkaAdresowa::KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami)
+    : uzytkownikMeneger(nazwaPlikuZUzytkownikami), adresatMeneger(nazwaPlikuZAdresatami){//lista inicjalizacyjna przekazujaca nazewPlioku... do kolejnych klas
     uzytkownikMeneger.wczytajUzytkownikowZPliku(); // pozostale inicjacje
 }
 
@@ -14,6 +15,8 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow(){
 
 void KsiazkaAdresowa::logowanieUzytkownika(){
     uzytkownikMeneger.logowanieUzytkownika();
+    if (uzytkownikMeneger.czyUzytkownikJestZalogowany())
+        adresatMeneger.ustawIdZalogowanegoUzytkownika(uzytkownikMeneger.pobierzIdZalogowanegoUzytkownika());
 }
 
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika(){
@@ -22,4 +25,8 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika(){
 
 void KsiazkaAdresowa::wylogowanieUzytkownika(){
     uzytkownikMeneger.wylogowanieUzytkownika();
+}
+
+void KsiazkaAdresowa::dodajAdresata(){
+     adresatMeneger.dodajAdresata();
 }

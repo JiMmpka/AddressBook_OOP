@@ -1,5 +1,9 @@
 #include "UzytkownikMeneger.h"
 
+int UzytkownikMeneger::pobierzIdZalogowanegoUzytkownika(){
+    return idZalogowanegoUzytkownika;
+};
+
 void UzytkownikMeneger::rejestracjaUzytkownika(){
     Uzytkownik uzytkownik = podajDaneNowegoUzytkownika();
 
@@ -84,7 +88,7 @@ void UzytkownikMeneger::wczytajUzytkownikowZPliku(){
 void UzytkownikMeneger::logowanieUzytkownika(){
     Uzytkownik uzytkownik;
     string login = "", haslo = "";
-    idZalogowanegoUzytkownika = 0; // przemyœleæ czy to jest potrzebne
+    //idZalogowanegoUzytkownika = 0; // przemyœleæ czy to jest potrzebne
     vector <Uzytkownik>::iterator itr = uzytkownicy.begin();
 
     cout << endl << "Podaj login: ";
@@ -135,5 +139,12 @@ void UzytkownikMeneger::zmianaHaslaZalogowanegoUzytkownika()
 void UzytkownikMeneger::wylogowanieUzytkownika(){
     idZalogowanegoUzytkownika = 0;
     //adresaci.clear();
+}
+
+bool UzytkownikMeneger::czyUzytkownikJestZalogowany(){
+    if(idZalogowanegoUzytkownika > 0)
+        return true;
+    else
+        return false;
 }
 

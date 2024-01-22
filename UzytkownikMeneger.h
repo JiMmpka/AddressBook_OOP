@@ -14,11 +14,10 @@
 
 using namespace std;
 
-
 class UzytkownikMeneger{
-    int idZalogowanegoUzytkownika; //
+    int idZalogowanegoUzytkownika; //TO DOO problem ze statycznym idZalogowanegoUzytkownika w funkcji pobierzIdZalogowanegoUzytkownika idZalogowanegoUzytkownika
     vector <Uzytkownik> uzytkownicy;
-    PlikZUzytkownikami plikZUzytkownikami; // jezli okrzysta sie z obiektu w kilku miejscach to mozna go utworzyc w pliku nag³owkowym
+    PlikZUzytkownikami plikZUzytkownikami; // jezli okrzysta sie z obiektu w kilku miejscach to mozna go utworzyc w pliku nagÂ³owkowym
 
     Uzytkownik podajDaneNowegoUzytkownika();
     int pobierzIdNowegoUzytkownika();
@@ -26,12 +25,15 @@ class UzytkownikMeneger{
     Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
 
 public:
-    UzytkownikMeneger(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami){};//przekazanie przez liste inicjalizacyjna nazwyPliku do klasy plikZUzytkownikami
+    UzytkownikMeneger(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami){idZalogowanegoUzytkownika = 0;};//przekazanie przez liste inicjalizacyjna nazwyPliku do klasy plikZUzytkownikami
     void rejestracjaUzytkownika();
     void logowanieUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
     void zmianaHaslaZalogowanegoUzytkownika();
     void wylogowanieUzytkownika();
+    int pobierzIdZalogowanegoUzytkownika();
+    bool czyUzytkownikJestZalogowany();
 };
+
 #endif // UZYTKOWNIKMENEGER_H
