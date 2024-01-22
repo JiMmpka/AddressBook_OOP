@@ -25,8 +25,13 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika(){
 
 void KsiazkaAdresowa::wylogowanieUzytkownika(){
     uzytkownikMeneger.wylogowanieUzytkownika();
+    adresatMeneger.wyczyscVektorZAdresatami();
 }
 
 void KsiazkaAdresowa::dodajAdresata(){
      adresatMeneger.dodajAdresata();
 }
+
+void KsiazkaAdresowa::wyswietlWszystkichAdresatow(){
+    adresatMeneger.wyswietlWszystkichAdresatow();
+};

@@ -138,7 +138,7 @@ void UzytkownikMeneger::zmianaHaslaZalogowanegoUzytkownika()
 
 void UzytkownikMeneger::wylogowanieUzytkownika(){
     idZalogowanegoUzytkownika = 0;
-    //adresaci.clear();
+
 }
 
 bool UzytkownikMeneger::czyUzytkownikJestZalogowany(){

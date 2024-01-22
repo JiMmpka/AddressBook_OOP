@@ -26,11 +26,13 @@ class AdresatMeneger{
 
     Adresat podajDaneNowegoAdresata(int idOstatniegoAdresata);
     string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
-    //int wczytajAdresatowZalogowanegoUzytkownikaZPliku();
+    void wyswietlDaneAdresata(Adresat adresat);
 
 public:
     AdresatMeneger(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami){};//przekazanie przez liste inicjalizacyjna nazwyPliku do klasy plikZAdresatami
     void dodajAdresata();
     void ustawIdZalogowanegoUzytkownika(int idZalogowanegoUzytkownika);
+    void wyswietlWszystkichAdresatow();
+    void wyczyscVektorZAdresatami();
 };
 #endif // ADRESATMENEGER_H
