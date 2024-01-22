@@ -9,14 +9,7 @@
 #include "PlikZAdresatami.h"
 #include "MetodyPomocnicze.h"
 #include "UzytkownikMeneger.h"
-//#include "KsiazkaAdresowa.h"
 
-
-/*
-#include <string>
-#include <fstream>
-#include <sstream>
-*/
 using namespace std;
 
 class AdresatMeneger{
@@ -31,8 +24,8 @@ class AdresatMeneger{
 public:
     AdresatMeneger(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami){};//przekazanie przez liste inicjalizacyjna nazwyPliku do klasy plikZAdresatami
     void dodajAdresata();
-    void ustawIdZalogowanegoUzytkownika(int idZalogowanegoUzytkownika);
     void wyswietlWszystkichAdresatow();
     void wyczyscVektorZAdresatami();
+    void ustawIdZalogowanegoUzytkownika(int idZalogowanegoUzytkownika);
 };
 #endif // ADRESATMENEGER_H

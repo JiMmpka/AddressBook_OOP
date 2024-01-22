@@ -15,9 +15,9 @@
 using namespace std;
 
 class UzytkownikMeneger{
-    int idZalogowanegoUzytkownika; //TO DOO problem ze statycznym idZalogowanegoUzytkownika w funkcji pobierzIdZalogowanegoUzytkownika idZalogowanegoUzytkownika
+    int idZalogowanegoUzytkownika;
     vector <Uzytkownik> uzytkownicy;
-    PlikZUzytkownikami plikZUzytkownikami; // jezli okrzysta sie z obiektu w kilku miejscach to mozna go utworzyc w pliku nag³owkowym
+    PlikZUzytkownikami plikZUzytkownikami;
 
     Uzytkownik podajDaneNowegoUzytkownika();
     int pobierzIdNowegoUzytkownika();
