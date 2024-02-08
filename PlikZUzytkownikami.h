@@ -12,13 +12,13 @@
 using namespace std;
 
 class PlikZUzytkownikami{
-    const string nazwaPlikuZUzytkownikami;
+    const string NAZWA_PLIKU_Z_UZYTKOWNIKAMI;
 
     bool czyPlikJestPusty(fstream &plikTekstowy);
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
 
 public:
-    PlikZUzytkownikami(string NAZWAPLIKUZUZYTKOWNIKAMI) : nazwaPlikuZUzytkownikami(NAZWAPLIKUZUZYTKOWNIKAMI){}; //aby zdefiniowac stala globalna const trzeba ja zainicjalizowac w liscie inicjalizacyjnej konstruktora w pliku naglówkowym lub w pliku cpp
+    PlikZUzytkownikami(string nazwaPlikuZUzytkownikami) : NAZWA_PLIKU_Z_UZYTKOWNIKAMI(nazwaPlikuZUzytkownikami){}; //aby zdefiniowac stala globalna const trzeba ja zainicjalizowac w liscie inicjalizacyjnej konstruktora w pliku naglówkowym lub w pliku cpp
 
     void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
     vector <Uzytkownik> wczytajUzytkownikowZPliku();
