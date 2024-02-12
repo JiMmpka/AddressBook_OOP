@@ -25,7 +25,10 @@ class UzytkownikMeneger{
     Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
 
 public:
-    UzytkownikMeneger(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami){idZalogowanegoUzytkownika = 0;};//przekazanie przez liste inicjalizacyjna nazwyPliku do klasy plikZUzytkownikami
+    UzytkownikMeneger(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami){ //przekazanie przez liste inicjalizacyjna nazwyPliku do klasy plikZUzytkownikami
+        idZalogowanegoUzytkownika = 0;
+        uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+        };
     void rejestracjaUzytkownika();
     void logowanieUzytkownika();
     void wypiszWszystkichUzytkownikow();

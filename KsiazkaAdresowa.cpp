@@ -1,10 +1,5 @@
 #include "KsiazkaAdresowa.h"
 
-KsiazkaAdresowa::KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami)
-    : uzytkownikMeneger(nazwaPlikuZUzytkownikami), adresatMeneger(nazwaPlikuZAdresatami){//lista inicjalizacyjna przekazujaca nazewPlioku... do kolejnych klas
-    uzytkownikMeneger.wczytajUzytkownikowZPliku(); // pozostale inicjacje
-}
-
 void KsiazkaAdresowa::rejestracjaUzytkownika(){
     uzytkownikMeneger.rejestracjaUzytkownika();
 
@@ -16,7 +11,7 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow(){
 void KsiazkaAdresowa::logowanieUzytkownika(){
     uzytkownikMeneger.logowanieUzytkownika();
     if (uzytkownikMeneger.czyUzytkownikJestZalogowany())
-        adresatMeneger.ustawIdZalogowanegoUzytkownika(uzytkownikMeneger.pobierzIdZalogowanegoUzytkownika());
+        adresatMeneger = new AdresatMeneger(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMeneger.pobierzIdZalogowanegoUzytkownika());
 }
 
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika(){
@@ -25,13 +20,14 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika(){
 
 void KsiazkaAdresowa::wylogowanieUzytkownika(){
     uzytkownikMeneger.wylogowanieUzytkownika();
-    adresatMeneger.wyczyscVektorZAdresatami();
+    delete adresatMeneger;
+    adresatMeneger = NULL; // ustawienie wskaŸnika na pust¹ komórkê
 }
 
 void KsiazkaAdresowa::dodajAdresata(){
-     adresatMeneger.dodajAdresata();
+     adresatMeneger->dodajAdresata();
 }
 
 void KsiazkaAdresowa::wyswietlWszystkichAdresatow(){
-    adresatMeneger.wyswietlWszystkichAdresatow();
+    adresatMeneger->wyswietlWszystkichAdresatow();
 };

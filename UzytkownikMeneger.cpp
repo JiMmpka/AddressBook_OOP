@@ -61,10 +61,6 @@ void UzytkownikMeneger::wypiszWszystkichUzytkownikow(){
         }
 }
 
-void UzytkownikMeneger::wczytajUzytkownikowZPliku(){
-    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
-}
-
 void UzytkownikMeneger::logowanieUzytkownika(){
     Uzytkownik uzytkownik;
     string login = "", haslo = "";
