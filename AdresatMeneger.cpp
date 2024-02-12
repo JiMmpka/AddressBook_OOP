@@ -22,6 +22,9 @@ Adresat AdresatMeneger::podajDaneNowegoAdresata(){
     Adresat adresat;
     string temp = "";
 
+    cout << plikZAdresatami.pobierzIdOstatniegoAdresata();
+    system("pause");
+
     adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata() + 1);
     adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 

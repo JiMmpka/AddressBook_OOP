@@ -9,17 +9,14 @@ int main()
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
 
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-    ksiazkaAdresowa.rejestracjaUzytkownika();
 
-    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
     ksiazkaAdresowa.logowanieUzytkownika();
-
-    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
 
     ksiazkaAdresowa.dodajAdresata();
     ksiazkaAdresowa.wyswietlWszystkichAdresatow();
 
     ksiazkaAdresowa.wylogowanieUzytkownika();
+
+    //TO DOO menu oraz zamiast if(idZalogwanegoUżytkownika = 0) w menu zrobic metodę bool czyUzytkownikJestZalogowany()
     return 0;
 }
