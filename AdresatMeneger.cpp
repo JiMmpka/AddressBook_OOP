@@ -13,7 +13,7 @@ void AdresatMeneger::dodajAdresata(){
         cout << "Nowy adresat zostal dodany" << endl;
     }
     else
-        cout << "Nie uda³o sie dodac nowego adresata do pliku" << endl;
+        cout << "Nie udalo sie dodac nowego adresata do pliku" << endl;
 
     system("pause");
 }
@@ -21,9 +21,6 @@ void AdresatMeneger::dodajAdresata(){
 Adresat AdresatMeneger::podajDaneNowegoAdresata(){
     Adresat adresat;
     string temp = "";
-
-    cout << plikZAdresatami.pobierzIdOstatniegoAdresata();
-    system("pause");
 
     adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata() + 1);
     adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
@@ -61,6 +58,7 @@ string AdresatMeneger::zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst){
 
 void AdresatMeneger::wyswietlWszystkichAdresatow(){
     system("cls");
+
     if (!adresaci.empty()){
         cout << "             >>> ADRESACI <<<" << endl;
         cout << "-----------------------------------------------" << endl;

@@ -1,5 +1,25 @@
 #include "KsiazkaAdresowa.h"
 
+char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego(){
+    char wybor;
+
+    system("cls");
+    cout << "    >>> MENU  GLOWNE <<<" << endl;
+    cout << "---------------------------" << endl;
+    cout << "1. Rejestracja" << endl;
+    cout << "2. Logowanie" << endl;
+    cout << "9. Koniec programu" << endl;
+    cout << "---------------------------" << endl;
+    cout << "Twoj wybor: ";
+    wybor = MetodyPomocnicze::wczytajZnak();
+
+    return wybor;
+}
+
+char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika(){
+    return uzytkownikMeneger.wybierzOpcjeZMenuUzytkownika();
+}
+
 void KsiazkaAdresowa::rejestracjaUzytkownika(){
     uzytkownikMeneger.rejestracjaUzytkownika();
 
@@ -21,7 +41,7 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika(){
 void KsiazkaAdresowa::wylogowanieUzytkownika(){
     uzytkownikMeneger.wylogowanieUzytkownika();
     delete adresatMeneger;
-    adresatMeneger = NULL; // ustawienie wskaŸnika na pust¹ komórkê
+    adresatMeneger = NULL; // ustawienie wskaznika na pusta komórke
 }
 
 void KsiazkaAdresowa::dodajAdresata(){
@@ -30,4 +50,8 @@ void KsiazkaAdresowa::dodajAdresata(){
 
 void KsiazkaAdresowa::wyswietlWszystkichAdresatow(){
     adresatMeneger->wyswietlWszystkichAdresatow();
-};
+}
+
+bool KsiazkaAdresowa::czyUzytkownikJestZalogowany(){
+    return uzytkownikMeneger.czyUzytkownikJestZalogowany();
+}
