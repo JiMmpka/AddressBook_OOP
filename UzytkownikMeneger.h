@@ -37,6 +37,7 @@ public:
     void wylogowanieUzytkownika();
     int pobierzIdZalogowanegoUzytkownika();
     bool czyUzytkownikJestZalogowany();
+    char wybierzOpcjeZMenuUzytkownika();
 };
 
 #endif // UZYTKOWNIKMENEGER_H
