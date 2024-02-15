@@ -55,3 +55,7 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow(){
 bool KsiazkaAdresowa::czyUzytkownikJestZalogowany(){
     return uzytkownikMeneger.czyUzytkownikJestZalogowany();
 }
+
+void KsiazkaAdresowa::wyszukajAdresatowPoImieniu(){
+    adresatMeneger->wyszukajAdresatowPoImieniu();
+}
