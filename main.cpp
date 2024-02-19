@@ -1,6 +1,5 @@
 #include <iostream>
 #include "KsiazkaAdresowa.h"
-//#include "UzytkownikMeneger.h"
 
 using namespace std;
 
@@ -39,10 +38,10 @@ int main(){
                 ksiazkaAdresowa.dodajAdresata();
                 break;
             case '2':
-                //wyszukajAdresatowPoImieniu(adresaci);
+                ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
                 break;
             case '3':
-                //wyszukajAdresatowPoNazwisku(adresaci);
+                ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
                 break;
             case '4':
                 ksiazkaAdresowa.wyswietlWszystkichAdresatow();

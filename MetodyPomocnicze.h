@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <sstream>
+#include <algorithm>
 
 using namespace std;
 
@@ -12,6 +13,7 @@ public:
     static int konwersjaStringNaInt(string liczba);
     static string wczytajLinie();
     static char wczytajZnak();
+    static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
 };
 
 #endif // METODYPOMOCNICZE_H
