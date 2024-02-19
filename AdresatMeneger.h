@@ -29,5 +29,6 @@ public:
     void wyswietlWszystkichAdresatow();
     void wyczyscVektorZAdresatami();
     void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
 };
 #endif // ADRESATMENEGER_H
