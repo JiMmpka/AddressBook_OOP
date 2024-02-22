@@ -19,6 +19,7 @@ class AdresatMeneger{
     string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
     void wyswietlDaneAdresata(Adresat adresat);
     void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
+    int podajIdWybranegoAdresata();
 
 public:
     AdresatMeneger(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
@@ -30,5 +31,6 @@ public:
     void wyczyscVektorZAdresatami();
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
+    void usunAdresata();
 };
 #endif // ADRESATMENEGER_H
