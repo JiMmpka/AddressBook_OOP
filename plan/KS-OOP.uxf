@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>600</x>
+      <x>568</x>
       <y>32</y>
       <w>256</w>
       <h>160</h>
@@ -27,7 +27,7 @@ KsiazkaAdresowa()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>32</x>
+      <x>0</x>
       <y>480</y>
       <w>176</w>
       <h>152</h>
@@ -43,7 +43,7 @@ KsiazkaAdresowa()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1208</x>
+      <x>1176</x>
       <y>72</y>
       <w>248</w>
       <h>104</h>
@@ -57,7 +57,7 @@ KsiazkaAdresowa()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>280</x>
+      <x>248</x>
       <y>176</y>
       <w>248</w>
       <h>232</h>
@@ -87,7 +87,7 @@ KsiazkaAdresowa()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>248</x>
+      <x>216</x>
       <y>480</y>
       <w>432</w>
       <h>168</h>
@@ -111,7 +111,7 @@ KsiazkaAdresowa()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>392</x>
+      <x>360</x>
       <y>112</y>
       <w>224</w>
       <h>80</h>
@@ -122,7 +122,7 @@ KsiazkaAdresowa()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>848</x>
+      <x>816</x>
       <y>112</y>
       <w>184</w>
       <h>96</h>
@@ -133,7 +133,7 @@ KsiazkaAdresowa()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>912</x>
+      <x>880</x>
       <y>192</y>
       <w>248</w>
       <h>192</h>
@@ -161,7 +161,7 @@ AdresatMeneger()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>712</x>
+      <x>680</x>
       <y>480</y>
       <w>368</w>
       <h>216</h>
@@ -187,7 +187,7 @@ AdresatMeneger()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>896</x>
+      <x>864</x>
       <y>376</y>
       <w>120</w>
       <h>120</h>
@@ -198,7 +198,7 @@ AdresatMeneger()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>424</x>
+      <x>392</x>
       <y>400</y>
       <w>32</w>
       <h>96</h>
@@ -209,8 +209,26 @@ AdresatMeneger()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1120</x>
-      <y>480</y>
+      <x>592</x>
+      <y>256</y>
+      <w>176</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>PlikTekstowy
+--
+- nazwaPliku : string
+--
++ pobierzNazwePliku() : string
+
+- czyPlikJestPusty() : bool
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1112</x>
+      <y>472</y>
       <w>176</w>
       <h>152</h>
     </coordinates>
@@ -225,5 +243,27 @@ AdresatMeneger()
 - adres : string
 --</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>400</y>
+      <w>104</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;110.0;40.0;110.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>400</y>
+      <w>112</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;120.0;40.0;10.0;40.0;10.0;100.0</additional_attributes>
   </element>
 </diagram>
