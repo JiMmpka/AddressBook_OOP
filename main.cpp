@@ -35,7 +35,7 @@ int main(){
 
             switch (wybor){
             case '1':
-                ksiazkaAdresowa.dodajAdresata(); // TO DOO po usunięciu wszystkich adresatów z pliku dodaje adresata z kolejnym id a nie z id 1. nie ma tego po ponownym uruchomieniu.Funkcje kontrolują ID ostatniego adresata przy dodawaniu adresata ale nie kontrolują go przy usuwaniu adresatów.
+                ksiazkaAdresowa.dodajAdresata();
                 break;
             case '2':
                 ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
@@ -50,7 +50,7 @@ int main(){
                 ksiazkaAdresowa.usunAdresata();
                 break;
             case '6':
-               // edytujAdresata(adresaci); //TO DOO zrobić tą funkcję
+                ksiazkaAdresowa.edytujAdresata();
                 break;
             case '7':
                 ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();

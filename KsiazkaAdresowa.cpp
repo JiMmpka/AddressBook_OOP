@@ -67,3 +67,7 @@ void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku(){
 void KsiazkaAdresowa::usunAdresata(){
     adresatMeneger->usunAdresata();
 }
+
+void KsiazkaAdresowa::edytujAdresata(){
+    adresatMeneger->edytujAdresata();
+}

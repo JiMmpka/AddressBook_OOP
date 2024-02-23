@@ -20,6 +20,8 @@ class AdresatMeneger{
     void wyswietlDaneAdresata(Adresat adresat);
     void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
     int podajIdWybranegoAdresata();
+    char wybierzOpcjeZMenuEdycja();
+    void zaktualizujDaneWybranegoAdresata(Adresat adresat);
 
 public:
     AdresatMeneger(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
@@ -32,5 +34,6 @@ public:
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
     void usunAdresata();
+    void edytujAdresata();
 };
 #endif // ADRESATMENEGER_H
