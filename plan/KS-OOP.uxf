@@ -4,15 +4,16 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>568</x>
+      <x>552</x>
       <y>32</y>
       <w>256</w>
-      <h>160</h>
+      <h>272</h>
     </coordinates>
     <panel_attributes>KsiazkaAdresowa
 --
 - uzytkownikMeneger : UzytkownikMeneger
-- adresatMeneger : AdresatMeneger
+- *adresatMeneger : AdresatMeneger
+- NAZWA_PLIKU_Z_ADRESATAMI : string
 --
 KsiazkaAdresowa()
 + rejestracjaUzytkownika () : void
@@ -21,14 +22,21 @@ KsiazkaAdresowa()
 + zmianaHaslaZalogowanegoUzytkownika() : void
 + wylogowanieUzytkownika() : void
 + dodajAdresata() : void
-+ wyswietlWszystkichAdresatow() : void</panel_attributes>
++ wyswietlWszystkichAdresatow() : void
++ wybierzOpcjeZMenuGlownego() : char 
++ wybierzOpcjeZMenuUzytkownika() :  char
++ czyUzytkownikJestZalogowany() :  bool
++ wyszukajAdresatowPoImieniu() :  void
++ usunAdresata() : void
++ wyszukajAdresatowPoNazwisku() :  void
++ edytujAdresata() :  void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>480</y>
+      <x>200</x>
+      <y>760</y>
       <w>176</w>
       <h>152</h>
     </coordinates>
@@ -43,24 +51,28 @@ KsiazkaAdresowa()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1176</x>
-      <y>72</y>
+      <x>992</x>
+      <y>40</y>
       <w>248</w>
       <h>104</h>
     </coordinates>
     <panel_attributes>MetodyPomocnicze
 --
 + konwerjsaIntNaString() : string
-+ wczytajLinie() : string</panel_attributes>
++ konwerjsaStringNaInt() : int
++ wczytajLinie() : string
++ wczytajZnak() : char
++ zamienPierwszaLitereNaDuzaAPozostaleNaMale() : string
++ wczytajLiczbeCalkowita() : int</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>248</x>
-      <y>176</y>
+      <x>232</x>
+      <y>224</y>
       <w>248</w>
-      <h>232</h>
+      <h>264</h>
     </coordinates>
     <panel_attributes>UzytkownikMenedzer
 --
@@ -77,6 +89,7 @@ KsiazkaAdresowa()
 + wylogowanieUzytkownika() : void
 + pobierzIdZalogowanegoUzytkownika() : int
 + czyUzytkownikJestZalogowany() : bool
++ wybierzOpcjeZMenuUzytkownika() :  char
 
 - podajDaneNowegoUzytkownika() : Uzytkownik
 - pobierzIdNowegoUzytkownika() : int
@@ -87,14 +100,13 @@ KsiazkaAdresowa()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>216</x>
-      <y>480</y>
+      <x>200</x>
+      <y>560</y>
       <w>432</w>
       <h>168</h>
     </coordinates>
     <panel_attributes>PlikZUzytkownikami
 --
-- nazwaPlikuZUzytkownikami : string
 --
 + PlikZUzytkownikami()
 + dopiszUzytkownikaDoPliku() : void
@@ -102,7 +114,6 @@ KsiazkaAdresowa()
 + pobierzDaneUzytkownika() : Uzytkownik
 + zapiszWszystkichUzytkownikowDoPliku() : void
 
-- czyPlikJestPusty() : bool
 - zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami() : string
 
 </panel_attributes>
@@ -111,32 +122,32 @@ KsiazkaAdresowa()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
-      <y>112</y>
+      <x>344</x>
+      <y>136</y>
       <w>224</w>
-      <h>80</h>
+      <h>104</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>260.0;10.0;10.0;10.0;10.0;80.0</additional_attributes>
+    <additional_attributes>260.0;10.0;10.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>816</x>
-      <y>112</y>
-      <w>184</w>
-      <h>96</h>
+      <x>800</x>
+      <y>136</y>
+      <w>160</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;210.0;10.0;210.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;180.0;10.0;180.0;70.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>880</x>
+      <x>840</x>
       <y>192</y>
-      <w>248</w>
-      <h>192</h>
+      <w>304</w>
+      <h>272</h>
     </coordinates>
     <panel_attributes>AdresatMenedzer
 --
@@ -147,59 +158,65 @@ KsiazkaAdresowa()
 AdresatMeneger()
 + dodajAdresata() : int
 + wyswietlWszystkichAdresatow() : void
-+ wyczyscVektorZAdresatami() : void
-+ ustawIdZalogowanegoUzytkownika() : void
++ wyszukajAdresatowPoImieniu() :  void
++ wyszukajAdresatowPoNazwisku() :  void
++ usunAdresata() :  void
++ edytujAdresata() :  void
 
 - podajDaneNowegoAdresata() : Adresat
 - zamienPierwszaLitereNaDuzaAPozostaleNaMale() : string
 - wyswietlDaneAdresata() : void
-
-
-</panel_attributes>
+- wyswietlIloscWyszukanychAdresatow() : void
+- podajIdWybranegoAdresata() int
+- wybierzOpcjeZMenuEdycja() : char
+- zaktualizujDaneWybranegoAdresata() : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>680</x>
-      <y>480</y>
-      <w>368</w>
-      <h>216</h>
+      <x>688</x>
+      <y>552</y>
+      <w>416</w>
+      <h>264</h>
     </coordinates>
     <panel_attributes>PlikZAdresatami
 --
-- wczytajAdresatowZalogowanegoUzytkownikaZPliku() : void
-- nazwaPlikuZAdresatami : string
+- NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI : string
 - idOstatniegoAdresata : int
 --
 + PlikZAdresatami()
 + dopiszAdresataDoPliku() : void
-+ wczytajAdresatowZalogowanegoUzytkownikaZPliku() : int
++ wczytajAdresatowZalogowanegoUzytkownikaZPliku() : vector &lt;Adresat&gt;
 + pobierzDaneAdresata() Adresat
 + pobierzIdAdresataZDanychOddzielonychPionowymiKreskami() : int
++ usunWybranegoAdresataZPliku() : void
++ usunPlik(string nazwaPlikuZRozszerzeniem) : void
++ zmienNazwePliku() : void
++ edytujWybranegoAdresataWPliku() void
 
 - zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami() : string 
-- czyPlikJestPusty() : bool
 - pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami() : int
-- pobierzLiczbe() : string</panel_attributes>
+- pobierzLiczbe() : string
+- przypisanieIdOstatniegoAdresata() : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>864</x>
-      <y>376</y>
-      <w>120</w>
-      <h>120</h>
+      <x>872</x>
+      <y>456</y>
+      <w>72</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>130.0;10.0;130.0;80.0;10.0;80.0;10.0;130.0</additional_attributes>
+    <additional_attributes>70.0;10.0;70.0;80.0;10.0;80.0;10.0;120.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>392</x>
-      <y>400</y>
+      <x>376</x>
+      <y>480</y>
       <w>32</w>
       <h>96</h>
     </coordinates>
@@ -209,8 +226,8 @@ AdresatMeneger()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>592</x>
-      <y>256</y>
+      <x>576</x>
+      <y>344</y>
       <w>176</w>
       <h>152</h>
     </coordinates>
@@ -227,8 +244,8 @@ AdresatMeneger()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1112</x>
-      <y>472</y>
+      <x>488</x>
+      <y>760</y>
       <w>176</w>
       <h>152</h>
     </coordinates>
@@ -247,23 +264,23 @@ AdresatMeneger()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
-      <y>400</y>
-      <w>104</w>
-      <h>96</h>
+      <x>656</x>
+      <y>488</y>
+      <w>128</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0;110.0;40.0;110.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0;140.0;30.0;140.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
-      <y>400</y>
+      <x>544</x>
+      <y>488</y>
       <w>112</w>
-      <h>96</h>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>120.0;10.0;120.0;40.0;10.0;40.0;10.0;100.0</additional_attributes>
+    <additional_attributes>120.0;10.0;120.0;30.0;10.0;30.0;10.0;90.0</additional_attributes>
   </element>
 </diagram>

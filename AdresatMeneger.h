@@ -30,7 +30,6 @@ public:
     };
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
-    void wyczyscVektorZAdresatami();
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
     void usunAdresata();

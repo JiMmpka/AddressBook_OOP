@@ -82,10 +82,6 @@ void AdresatMeneger::wyswietlDaneAdresata(Adresat adresat){
     cout << "Adres:              " << adresat.pobierzAdres() << endl;
 }
 
-void AdresatMeneger::wyczyscVektorZAdresatami(){
-    adresaci.clear();
-}
-
 void AdresatMeneger::wyszukajAdresatowPoImieniu(){
     string imiePoszukiwanegoAdresata = "";
     int iloscAdresatow = 0;
