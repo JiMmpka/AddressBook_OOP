@@ -28,7 +28,6 @@ public:
     char wybierzOpcjeZMenuUzytkownika();
     void rejestracjaUzytkownika();
     void logowanieUzytkownika();
-    void wypiszWszystkichUzytkownikow();
     void zmianaHaslaZalogowanegoUzytkownika();
     void wylogowanieUzytkownika();
     void dodajAdresata();

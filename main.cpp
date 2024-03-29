@@ -12,8 +12,6 @@ int main(){
         if (!ksiazkaAdresowa.czyUzytkownikJestZalogowany()){
             wybor = ksiazkaAdresowa.wybierzOpcjeZMenuGlownego();
 
-            ksiazkaAdresowa.wypiszWszystkichUzytkownikow(); //TEMP
-
             switch (wybor){
             case '1':
                 ksiazkaAdresowa.rejestracjaUzytkownika();
